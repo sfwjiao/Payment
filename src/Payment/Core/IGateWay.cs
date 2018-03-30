@@ -16,6 +16,11 @@ namespace Payment.Core
         /// 商户配置信息
         /// </summary>
         IMerchantConfigure MerchantConfigure { get; set; }
+        
+        /// <summary>
+        /// 是否为调试
+        /// </summary>
+        bool IsDebug { get; }
 
         /// <summary>
         /// 注入请求类型
