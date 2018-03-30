@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4552BC97-1039-45D7-B3D8-07FA0C101838}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Payment</RootNamespace>
+    <AssemblyName>Payment</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alipay\AlipayBackContent.cs" />
+    <Compile Include="Alipay\AlipayHtmlRequest.cs" />
+    <Compile Include="Alipay\AlipayMerchantConfigure.cs" />
+    <Compile Include="Alipay\AlipayNotify.cs" />
+    <Compile Include="Alipay\AlipayNotifyContent.cs" />
+    <Compile Include="Alipay\AlipayPostBackContent.cs" />
+    <Compile Include="Alipay\AlipayPostRequest.cs" />
+    <Compile Include="Alipay\AlipayPostRequestContent.cs" />
+    <Compile Include="Alipay\AlipayQueryBackContent.cs" />
+    <Compile Include="Alipay\AlipayQueryRequest.cs" />
+    <Compile Include="Alipay\AlipayQueryRequestContent.cs" />
+    <Compile Include="Alipay\AlipayRefundBackContent.cs" />
+    <Compile Include="Alipay\AlipayRefundQueryBackContent.cs" />
+    <Compile Include="Alipay\AlipayRefundQueryRequest.cs" />
+    <Compile Include="Alipay\AlipayRefundQueryRequestContent.cs" />
+    <Compile Include="Alipay\AlipayRefundRequest.cs" />
+    <Compile Include="Alipay\AlipayRefundRequestContent.cs" />
+    <Compile Include="Alipay\AlipayRequestContent.cs" />
+    <Compile Include="Alipay\AlipaySignature.cs" />
+    <Compile Include="Alipay\AlipayWapPayRequest.cs" />
+    <Compile Include="Alipay\AlipayWapPayRequestContent.cs" />
+    <Compile Include="Alipay\AlipayWebPayRequest.cs" />
+    <Compile Include="Alipay\AlipayWebPayRequestContent.cs" />
+    <Compile Include="Core\Content.cs" />
+    <Compile Include="Core\GateWay.cs" />
+    <Compile Include="Core\GateWayException.cs" />
+    <Compile Include="Core\HtmlRequest.cs" />
+    <Compile Include="Core\IBackContent.cs" />
+    <Compile Include="Core\IContent.cs" />
+    <Compile Include="Core\IGateWay.cs" />
+    <Compile Include="Core\IHtmlRequest.cs" />
+    <Compile Include="Core\IMerchantConfigure.cs" />
+    <Compile Include="Core\INeedNotifyRequest.cs" />
+    <Compile Include="Core\INotify.cs" />
+    <Compile Include="Core\INotifyContent.cs" />
+    <Compile Include="Core\IOrder.cs" />
+    <Compile Include="Core\IParamaterAnalyzer.cs" />
+    <Compile Include="Core\IPlatformOrder.cs" />
+    <Compile Include="Core\IPostBackContent.cs" />
+    <Compile Include="Core\IPostRequest.cs" />
+    <Compile Include="Core\IPostRequestContent.cs" />
+    <Compile Include="Core\IQueryBackContent.cs" />
+    <Compile Include="Core\IQueryRequest.cs" />
+    <Compile Include="Core\IRefundBackContent.cs" />
+    <Compile Include="Core\IRefundOrder.cs" />
+    <Compile Include="Core\IRefundQueryBackContent.cs" />
+    <Compile Include="Core\IRefundQueryOrder.cs" />
+    <Compile Include="Core\IRefundQueryRequest.cs" />
+    <Compile Include="Core\IRefundRequest.cs" />
+    <Compile Include="Core\IRequest.cs" />
+    <Compile Include="Core\IRequestContent.cs" />
+    <Compile Include="Core\IRequestParamaters.cs" />
+    <Compile Include="Core\IReturnOrder.cs" />
+    <Compile Include="Core\ISignature.cs" />
+    <Compile Include="Core\IWapPayRequest.cs" />
+    <Compile Include="Core\IWebPayRequest.cs" />
+    <Compile Include="Core\JsonParamaterAnalyzer.cs" />
+    <Compile Include="Core\MerchantConfigure.cs" />
+    <Compile Include="Core\Notify.cs" />
+    <Compile Include="Core\NotImplementedRequestException.cs" />
+    <Compile Include="Core\PaymentArgumentException.cs" />
+    <Compile Include="Core\PaymentContainer.cs" />
+    <Compile Include="Core\PaymentException.cs" />
+    <Compile Include="Core\PostRequest.cs" />
+    <Compile Include="Core\RequestBase.cs" />
+    <Compile Include="Core\RequestHandler.cs" />
+    <Compile Include="Core\UrlParamaterAnalyzer.cs" />
+    <Compile Include="Core\VerifyException.cs" />
+    <Compile Include="Core\XmlParamaterAnalyzer.cs" />
+    <Compile Include="Http\CertCreater.cs" />
+    <Compile Include="Http\CookieContainerModel.cs" />
+    <Compile Include="Http\DefaultRequest.cs" />
+    <Compile Include="Http\ICertModel.cs" />
+    <Compile Include="Http\ICookieModel.cs" />
+    <Compile Include="Http\LiteHttpClient.cs" />
+    <Compile Include="Http\ThumbprintCertModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\SecurityUtiity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
