@@ -10,7 +10,7 @@ namespace Payment.Alipay
         {
             if (!(content is AlipayRequestContent webpayContent)) throw new PaymentException(GateWay.Name, "请求正文类型错误，必须继承自AlipayRequestContent类型");
 
-            return $"{(IsDebug ? "https://openapi.alipaydev.com/gateway.do" : "https://openapi.alipay.com/gateway.do")}?charset={webpayContent.Charset}";
+            return $"{(GateWay.IsDebug ? "https://openapi.alipaydev.com/gateway.do" : "https://openapi.alipay.com/gateway.do")}?charset={webpayContent.Charset}";
         }
 
         protected override ISignature Signature => new AlipaySignature(GateWay);

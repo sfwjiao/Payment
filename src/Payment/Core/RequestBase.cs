@@ -16,11 +16,6 @@
         public IGateWay GateWay { get; protected set; }
 
         /// <summary>
-        /// 是否为调试环境
-        /// </summary>
-        public virtual bool IsDebug { get; set; }
-
-        /// <summary>
         /// 签名器
         /// </summary>
         protected abstract ISignature Signature { get; }

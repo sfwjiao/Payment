@@ -6,7 +6,7 @@ namespace Payment.Http
     /// 用于创建证书
     /// 使用单例并在创建时锁定Creater，避免同时读取X509Store引起的内存错误
     /// </summary>
-    public sealed class CertCreater
+    internal sealed class CertCreater
     {
         /// <summary>
         /// 单例对象，用于X509Store对象证书操作的同步访问

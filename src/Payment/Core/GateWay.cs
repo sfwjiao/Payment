@@ -17,16 +17,23 @@ namespace Payment.Core
         /// </summary>
         public IMerchantConfigure MerchantConfigure { get; set; }
 
-        public GateWay(IMerchantConfigure merchantConfigure)
+        public GateWay(IMerchantConfigure merchantConfigure, bool isDebug = false)
         {
             MerchantConfigure = merchantConfigure;
+            IsDebug = isDebug;
         }
 
-        public GateWay(IMerchantConfigure merchantConfigure, string name)
+        public GateWay(IMerchantConfigure merchantConfigure, string name, bool isDebug = false)
         {
             MerchantConfigure = merchantConfigure;
             Name = name;
+            IsDebug = isDebug;
         }
+
+        /// <summary>
+        /// 是否为调试
+        /// </summary>
+        public bool IsDebug { get; protected set; }
 
         /// <summary>
         /// 注入请求类型
