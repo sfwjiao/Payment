@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace Payment.Http
 {
-    public class ThumbprintCertModel : ICertModel
+    internal class ThumbprintCertModel : ICertModel
 	{
 		/// <summary>
 		/// 证书

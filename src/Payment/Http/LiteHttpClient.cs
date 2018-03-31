@@ -9,7 +9,7 @@ using System.Web;
 
 namespace Payment.Http
 {
-    public class LiteHttpClient
+    internal class LiteHttpClient
     {
         #region  --属性--
 

@@ -2,7 +2,7 @@
 
 namespace Payment.Http
 {
-    public interface ICertModel
+    internal interface ICertModel
 	{
 		void SetCert(HttpWebRequest request);
 	}

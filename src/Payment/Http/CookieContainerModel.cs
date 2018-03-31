@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Payment.Http
 {
-    public class CookieContainerModel : ICookieModel
+    internal class CookieContainerModel : ICookieModel
 	{
 		private readonly CookieContainer _cookieContainer;
 		public CookieContainerModel()

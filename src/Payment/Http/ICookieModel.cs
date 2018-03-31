@@ -2,7 +2,7 @@
 
 namespace Payment.Http
 {
-    public interface ICookieModel
+    internal interface ICookieModel
 	{
 		void SetCookies(HttpWebRequest request);
 		void GetCookies(HttpWebResponse response);
