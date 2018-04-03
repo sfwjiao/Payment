@@ -6,5 +6,7 @@
     public abstract class MerchantConfigure : IMerchantConfigure
     {
         public string MerchantId { get; set; }
+
+        public string SignType { get; set; }
     }
 }

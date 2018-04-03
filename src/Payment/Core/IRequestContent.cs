@@ -10,7 +10,7 @@ namespace Payment.Core
         /// <summary>
         /// 签名类型
         /// </summary>
-        string SignType { get; }
+        string SignType { get; set; }
 
         /// <summary>
         /// 编码格式

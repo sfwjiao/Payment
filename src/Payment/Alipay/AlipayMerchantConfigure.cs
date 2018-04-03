@@ -7,6 +7,11 @@ namespace Payment.Alipay
     /// </summary>
     public class AlipayMerchantConfigure : MerchantConfigure
     {
+        public AlipayMerchantConfigure()
+        {
+            SignType = "RSA2";
+        }
+
         /// <summary>
         /// 公钥
         /// </summary>

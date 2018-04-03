@@ -15,7 +15,7 @@ namespace Payment.Alipay
         {
             Format = "JSON";
             Charset = "utf-8";
-            SignType = "RSA2";
+            SignType = gateWay.MerchantConfigure.SignType ?? "RSA2";
             Version = "1.0";
             Timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             AppId = gateWay.MerchantConfigure.MerchantId;
